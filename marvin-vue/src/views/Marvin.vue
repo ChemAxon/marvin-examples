@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
-import { createMarvinPro } from 'marvinpro'
+import { createMarvin } from '@chemaxon/marvin'
 
 onMounted(() => {
   const marvinproContainer = document.getElementById('marvin-app')
 
   if (marvinproContainer) {
-    createMarvinPro(marvinproContainer, {}).then((mPro) => {})
+    createMarvin(marvinproContainer, {}).then((mPro) => {})
   }
 })
 </script>

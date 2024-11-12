@@ -1,4 +1,4 @@
-import { ReactMarvin, ReactMarvinProps } from "marvin";
+import { ReactMarvin, ReactMarvinProps } from "@chemaxon/marvin";
 
 export interface MarvinProps extends ReactMarvinProps {}
 

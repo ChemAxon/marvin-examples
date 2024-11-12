@@ -10,8 +10,7 @@
 /node_modules
 npm-debug.log
 yarn-error.log
-.npmrc
-.npm
+package-lock.json
 
 
 # IDEs and editors

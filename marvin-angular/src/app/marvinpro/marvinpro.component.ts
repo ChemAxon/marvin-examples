@@ -1,19 +1,19 @@
-import { AfterContentInit, Component } from "@angular/core";
-import { createMarvinPro } from "marvinpro";
+import { AfterContentInit, Component } from '@angular/core';
+import { createMarvin } from '@chemaxon/marvin';
 
 @Component({
-    selector: "app-marvinpro",
-    standalone: true,
-    imports: [],
-    templateUrl: "./marvinpro.component.html",
-    styleUrl: "./marvinpro.component.scss",
+  selector: 'app-marvinpro',
+  standalone: true,
+  imports: [],
+  templateUrl: './marvinpro.component.html',
+  styleUrl: './marvinpro.component.scss',
 })
 export class MarvinproComponent implements AfterContentInit {
-    ngAfterContentInit() {
-        const marvinproContainer = document.getElementById("marvin-app");
+  ngAfterContentInit() {
+    const marvinproContainer = document.getElementById('marvin-app');
 
-        if (marvinproContainer) {
-            createMarvinPro(marvinproContainer, {}).then((mPro) => {});
-        }
+    if (marvinproContainer) {
+      createMarvin(marvinproContainer, {}).then((mPro) => {});
     }
+  }
 }

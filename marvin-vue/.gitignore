@@ -13,6 +13,7 @@ dist
 dist-ssr
 coverage
 *.local
+package-lock.json
 
 /cypress/videos/
 /cypress/screenshots/
@@ -31,5 +32,3 @@ coverage
 
 test-results/
 playwright-report/
-.npmrc
-.npm
