@@ -6,7 +6,7 @@ onMounted(() => {
   const marvinContainer = document.getElementById('marvin-app')
 
   if (marvinContainer) {
-    createMarvin(marvinContainer, {}).then((mPro) => {})
+    createMarvin(marvinContainer, {}).then((marvin) => {})
   }
 })
 </script>
