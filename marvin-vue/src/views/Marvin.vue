@@ -3,10 +3,10 @@ import { onMounted } from 'vue'
 import { createMarvin } from '@chemaxon/marvin'
 
 onMounted(() => {
-  const marvinproContainer = document.getElementById('marvin-app')
+  const marvinContainer = document.getElementById('marvin-app')
 
-  if (marvinproContainer) {
-    createMarvin(marvinproContainer, {}).then((mPro) => {})
+  if (marvinContainer) {
+    createMarvin(marvinContainer, {}).then((mPro) => {})
   }
 })
 </script>
