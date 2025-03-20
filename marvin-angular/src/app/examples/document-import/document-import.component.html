@@ -1,0 +1,56 @@
+<div class="import-container">
+  <button (click)="importDocument()" class="btn-import">Import</button>
+
+  <div class="import-settings">
+    <h3>Import Parameters</h3>
+
+    <!-- Clear Canvas & Select Imported Content -->
+    <div class="input-group">
+      <label for="check-clear">
+        <input id="check-clear" type="checkbox" [(ngModel)]="isCheckedClear" />
+        Clear canvas
+      </label>
+
+      <label for="check-select">
+        <input
+          id="check-select"
+          type="checkbox"
+          [(ngModel)]="isCheckedSelect"
+        />
+        Select imported content
+      </label>
+    </div>
+
+    <!-- Scaling Selection -->
+    <div class="input-group">
+      <label for="select-scaling">Scaling:</label>
+      <select id="select-scaling" [(ngModel)]="scale">
+        <option *ngFor="let s of importScales" [value]="s.value">
+          {{ s.displayValue }}
+        </option>
+      </select>
+    </div>
+
+    <!-- Placement Selection -->
+    <div class="input-group">
+      <label for="select-placement">Placement:</label>
+      <select id="select-placement" [(ngModel)]="placement">
+        <option *ngFor="let p of importPlacements" [value]="p.value">
+          {{ p.displayValue }}
+        </option>
+      </select>
+    </div>
+
+    <!-- Document Source Input -->
+    <div class="textarea-group">
+      <label for="config-json-import" class="label-above"
+        >Document source:</label
+      >
+      <textarea
+        id="config-json-import"
+        class="input-src"
+        [(ngModel)]="documentSource"
+      ></textarea>
+    </div>
+  </div>
+</div>

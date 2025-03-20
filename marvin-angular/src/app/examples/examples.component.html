@@ -1,0 +1,23 @@
+<section id="examples">
+  <div class="input-group">
+    <label for="filter-example">Example:</label>
+    <select [(ngModel)]="selectedExample" id="filter-example">
+      <option *ngFor="let e of examples" [value]="e.value">
+        {{ e.displayValue }}
+      </option>
+    </select>
+  </div>
+
+  <app-document-export
+    *ngIf="selectedExample === 'documentExport'"
+    [marvinRef]="marvinRef"
+  ></app-document-export>
+  <app-document-import
+    *ngIf="selectedExample === 'documentImport'"
+    [marvinRef]="marvinRef"
+  ></app-document-import>
+  <app-image-export
+    *ngIf="selectedExample === 'imageExport'"
+    [marvinRef]="marvinRef"
+  ></app-image-export>
+</section>

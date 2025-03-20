@@ -14,10 +14,8 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "@chemaxon/marvin": "^24.3.111",
+    "@chemaxon/marvin": "^25.1.7",
     "dotenv": "^16.4.5",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
     "vue": "^3.4.29",
     "vue-router": "^4.3.3"
   },
@@ -36,6 +34,7 @@
     "eslint-plugin-vue": "^9.23.0",
     "npm-run-all2": "^6.2.0",
     "prettier": "^3.2.5",
+    "sass-embedded": "^1.83.4",
     "typescript": "~5.4.0",
     "vite": "^5.3.1",
     "vue-tsc": "^2.0.21"

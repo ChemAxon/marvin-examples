@@ -1,0 +1,113 @@
+.container {
+  &-row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.input {
+  &-group {
+    display: flex;
+    margin-bottom: 0.5rem;
+    align-items: center;
+
+    label,
+    button {
+      flex: 0 0 auto;
+    }
+
+    select,
+    input {
+      flex: 1;
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+.textarea {
+  &-group {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.btn {
+  &-import {
+    width: 100%;
+  }
+
+  &-export {
+    &-image {
+      margin-right: auto;
+    }
+  }
+
+  &-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.hidden {
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+#export {
+  &-format {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  &-image-format {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+#config-json {
+  &-export {
+    margin-top: 8px;
+    min-height: calc(100vh - 86px);
+    border: 1px solid black;
+  }
+
+  &-import {
+    margin-top: 8px;
+    min-height: calc(100vh - 86px);
+    border: 1px solid black;
+  }
+
+  &-image {
+    margin-top: 8px;
+    min-height: 28vh;
+    overflow-y: auto;
+    border: 1px solid black;
+  }
+}
+
+#image-render {
+  margin-top: 8px;
+  min-height: 28vh;
+  overflow-y: auto;
+  border: 1px solid black;
+}
+
+#examples {
+  width: 30%;
+  padding: 12px;
+  overflow-y: auto;
+  max-height: 100vh;
+}
+
+label {
+  font-weight: 500;
+}
+
+pre {
+  overflow-x: auto;
+  margin-bottom: 0;
+}

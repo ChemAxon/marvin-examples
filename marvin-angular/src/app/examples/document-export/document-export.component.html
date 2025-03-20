@@ -1,0 +1,18 @@
+<div class="container-row">
+  <div class="input-group">
+    <label for="export-format">Format:</label>
+    <select
+      [ngModel]="format()"
+      (ngModelChange)="updateFormat($event)"
+      id="export-format"
+    >
+      <option *ngFor="let f of exportFormats" [value]="f.value">
+        {{ f.displayValue }}
+      </option>
+    </select>
+    <button (click)="exportDocument()">Export</button>
+  </div>
+  <div id="config-json-export">
+    <pre *ngIf="result()" [innerHTML]="result()"></pre>
+  </div>
+</div>

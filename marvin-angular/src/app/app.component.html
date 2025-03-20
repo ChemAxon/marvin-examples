@@ -1,5 +1,10 @@
-<main>
-  <app-marvin />
+<main id="app">
+  <app-marvin
+    id="app-marvin"
+    (setMarvinRef)="onMarvinReady($event)"
+  ></app-marvin>
+
+  <app-examples id="app-examples" [marvinRef]="marvinRef"></app-examples>
 </main>
 
 <router-outlet />

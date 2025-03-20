@@ -1,0 +1,54 @@
+<div class="container-col">
+  <div class="btn-group">
+    <button (click)="exportImage()" class="btn-export-img">Create image</button>
+    <button (click)="downloadImage()" class="btn-download-img">
+      Download image
+    </button>
+  </div>
+
+  <div class="container-row">
+    <label for="export-format">Format:</label>
+    <select
+      [ngModel]="format()"
+      (ngModelChange)="updateFormat($event)"
+      id="export-image-format"
+    >
+      <option *ngFor="let f of imageFormats" [value]="f">{{ f }}</option>
+    </select>
+
+    <label for="input-width">Width:</label>
+    <input
+      class="shrinkable-input"
+      id="input-width"
+      type="text"
+      [value]="width()"
+      (input)="updateWidth($event)"
+    />
+
+    <label for="input-height">Height:</label>
+    <input
+      class="shrinkable-input"
+      id="input-height"
+      type="text"
+      [value]="height()"
+      (input)="updateHeight($event)"
+    />
+  </div>
+
+  <label for="config-json-image">ImageConfig object:</label>
+  <div id="config-json-image">
+    <pre *ngIf="exportOptions()">{{ exportOptions() | json }}</pre>
+  </div>
+
+  <label>Exported image:</label>
+  <div id="image-render">
+    <div *ngIf="format() === 'SVG'" [innerHTML]="sanitizedSvg()"></div>
+    <img
+      *ngIf="format() !== 'SVG' && image()"
+      [src]="image()"
+      alt="Exported image"
+    />
+  </div>
+
+  <a class="hidden" id="link-download" #downloadLink></a>
+</div>

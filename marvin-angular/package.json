@@ -18,9 +18,7 @@
     "@angular/platform-browser": "^18.0.0",
     "@angular/platform-browser-dynamic": "^18.0.0",
     "@angular/router": "^18.0.0",
-    "@chemaxon/marvin": "^24.3.111",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "@chemaxon/marvin": "^25.1.7",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"

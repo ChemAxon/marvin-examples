@@ -1,0 +1,13 @@
+#app {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  &-examples {
+    width: 30%;
+  }
+
+  &-marvin {
+    width: 70%;
+  }
+}
