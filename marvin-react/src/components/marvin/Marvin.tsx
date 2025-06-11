@@ -11,6 +11,8 @@ export interface MarvinProps extends ReactMarvinProps {
 }
 
 export const Marvin = (props: MarvinProps) => {
+  // Set the host for Marvin Web Services for custom / separate backend
+  // Example: const MARVIN_WEBSERVICES_HOST = "http://localhost:8080";
   const MARVIN_WEBSERVICES_HOST = "";
 
   return (
