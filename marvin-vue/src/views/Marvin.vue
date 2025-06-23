@@ -14,7 +14,7 @@ const emit = defineEmits<{
 
 onMounted(() => {
   // Set the host for Marvin Web Services for custom / separate backend
-  // Example: const MARVIN_WEBSERVICES_HOST = "http://localhost:8080";
+  // Example: const MARVIN_WEBSERVICES_HOST = "http://localhost:8080/";
   const MARVIN_WEBSERVICES_HOST = ''
   const marvinContainer = document.getElementById('marvin-app')
 

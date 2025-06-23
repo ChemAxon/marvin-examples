@@ -24,7 +24,7 @@ export class MarvinComponent implements AfterContentInit {
 
   ngAfterContentInit() {
     // Set the host for Marvin Web Services for custom / separate backend
-    // Example: const MARVIN_WEBSERVICES_HOST = "http://localhost:8080";
+    // Example: const MARVIN_WEBSERVICES_HOST = "http://localhost:8080/";
     const MARVIN_WEBSERVICES_HOST = '';
 
     if (this.marvinContainer) {
