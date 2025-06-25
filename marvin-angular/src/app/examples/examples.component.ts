@@ -18,7 +18,7 @@ import { DocumentImportComponent } from './document-import/document-import.compo
     ImageExportComponent,
   ],
   templateUrl: './examples.component.html',
-  styleUrls: ['./examples.component.scss'],
+  styleUrls: ['./examples.component.css'],
 })
 export class ExamplesComponent {
   @Input() marvinRef?: Marvin;

@@ -63,5 +63,5 @@ export default {
 </script>
 
 <style>
-@import './examples.scss';
+@import './examples.css';
 </style>

@@ -2,8 +2,8 @@ import { useCallback, useState } from "react";
 import DocumentExport from "./DocumentExport";
 import DocumentImport from "./DocumentImport";
 import ImageExport from "./ImageExport";
-import "./examples.scss";
-import { Marvin } from "@chemaxon/marvin";
+import type { Marvin } from "@chemaxon/marvin";
+import "./examples.css";
 
 type ExampleProps = {
   marvinRef: Marvin | undefined;
