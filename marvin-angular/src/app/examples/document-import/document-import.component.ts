@@ -1,12 +1,12 @@
+import { Component, Input, signal } from '@angular/core';
 import {
-  Component,
-  Input,
-  signal,
-} from '@angular/core';
-import { Marvin, ImportOptions } from '@chemaxon/marvin';
+  Marvin,
+  ImportOptions,
+  PlacementType,
+  ScaleType,
+} from '@chemaxon/marvin';
 import { NgFor } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { PlacementType, ScaleType } from '@chemaxon/marvin/typings/api/marvin';
 
 interface PlacementProps {
   value: PlacementType;

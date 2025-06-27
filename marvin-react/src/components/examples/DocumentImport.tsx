@@ -1,9 +1,9 @@
-import { Marvin } from "@chemaxon/marvin";
 import {
+  Marvin,
   ImportOptions,
   PlacementType,
   ScaleType,
-} from "@chemaxon/marvin/typings/api/marvin";
+} from "@chemaxon/marvin";
 import { useState } from "react";
 
 type ImportProps = {
