@@ -1,0 +1,31 @@
+services:
+  marvin-backend:
+    image: chemaxon.jfrog.io/cxn-docker-release/chemaxon/marvin-backend:latest
+    ports:
+      - "8080:8080"
+    environment:
+      CHEMAXON_LICENSE_SERVER_KEY: ${CHEMAXON_LICENSE_SERVER_KEY}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 10s
+  marvin-rendering-backend:
+    image: chemaxon.jfrog.io/cxn-docker-release/chemaxon/marvin-backend:latest
+    ports:
+      - "3000:3000"
+    environment:
+      CHEMAXON_LICENSE_SERVER_KEY: ${CHEMAXON_LICENSE_SERVER_KEY}
+      MARVIN_BACKEND: "http://marvin-backend:8080"
+    depends_on:
+      marvin-backend:
+        condition: service_healthy
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 10s
