@@ -13,7 +13,7 @@ services:
       retries: 5
       start_period: 10s
   marvin-rendering-backend:
-    image: chemaxon.jfrog.io/cxn-docker-release/chemaxon/marvin-backend:latest
+    image: chemaxon.jfrog.io/cxn-docker-release/chemaxon/marvin-rendering-backend:latest
     ports:
       - "3000:3000"
     environment:
